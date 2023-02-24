@@ -7,24 +7,28 @@
     "default": {
       "customTemplates": {
         "component": "templates/default/TemplateName.tsx",
-        "style": "templates/default/TemplateName.module.scss"
+        "style": "templates/default/TemplateName.module.scss",
+        "index": "templates/default/index.ts"
       },
       "path": "src/components",
       "withStyle": true,
       "withTest": false,
       "withStory": false,
-      "withLazy": false
+      "withLazy": false,
+      "withIndex": true
     },
     "page": {
       "customTemplates": {
         "component": "templates/page/TemplateName.tsx",
-        "style": "templates/page/TemplateName.module.scss"
+        "style": "templates/page/TemplateName.module.scss",
+        "index": "templates/page/index.ts"
       },
       "path": "src/pages",
       "withStyle": true,
       "withTest": false,
       "withStory": false,
-      "withLazy": false
+      "withLazy": false,
+      "withIndex": true
     }
   }
 }

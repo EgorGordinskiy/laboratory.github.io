@@ -1,10 +1,11 @@
 import { FC } from "react";
-import Egor from "./components/Egor/Egor";
+import { Container } from "./components/Container";
+import { Header } from "./components/Header";
 
 const App: FC = () => {
   return (
     <>
-      <Egor />
+      <Header />
     </>
   );
 };

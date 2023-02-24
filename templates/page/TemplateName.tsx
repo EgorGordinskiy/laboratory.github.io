@@ -3,8 +3,6 @@ import classes from "./TemplateName.module.scss";
 
 interface TemplateNameProps {}
 
-const TemplateName: FC<TemplateNameProps> = () => (
+export const TemplateName: FC<TemplateNameProps> = () => (
   <section className={classes.templateName}></section>
 );
-
-export default TemplateName;

@@ -1,0 +1,18 @@
+@import "../../root.scss";
+
+.header {
+  background-color: $color-secondary;
+  padding: 10px 0px;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+  }
+}
