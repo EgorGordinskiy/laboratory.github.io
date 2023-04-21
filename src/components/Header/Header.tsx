@@ -2,7 +2,8 @@ import { FC } from "react";
 import { Container } from "../Container";
 import { Logo } from "../Logo";
 import classes from "./Header.module.scss";
-import burger from "../../assets/images/burger2.svg";
+import { PersonalAccountButton } from "../UI/PersonalAccountButton";
+import { BurgerButton } from "../UI/BurgerButton";
 
 interface HeaderProps {}
 
@@ -11,8 +12,11 @@ export const Header: FC<HeaderProps> = () => (
     <Container>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <img src={burger} alt="burger" className={classes.icon} />
+          <BurgerButton />
           <Logo />
+        </div>
+        <div className={classes.right}>
+          <PersonalAccountButton />
         </div>
       </div>
     </Container>
