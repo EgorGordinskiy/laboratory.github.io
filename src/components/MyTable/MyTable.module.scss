@@ -1,0 +1,73 @@
+@import "../../root.scss";
+
+.tableContainer {
+  margin: 0 auto;
+  width: 100%;
+  height: 400px;
+  padding-right: $padding-primary;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    padding-top: 10px;
+    width: 22px;
+    background-color: #d9d9d9;
+    border-radius: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: #fff;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+
+  td:first-child {
+    border-left: none;
+  }
+
+  td:last-child {
+    border-right: none;
+  }
+
+  tr:first-child td {
+    border-top: none;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  .header {
+    background-color: #e7e7e7;
+    position: sticky;
+    top: 0;
+
+    & th:first-child {
+      border-radius: 7px 0px 0px 7px;
+    }
+
+    & th:last-child {
+      border-radius: 0px 7px 7px 0px;
+    }
+  }
+
+  .body tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+
+  th {
+    padding: 16px;
+  }
+
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    font-weight: bold;
+  }
+}

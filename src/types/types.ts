@@ -1,7 +1,9 @@
 export interface ToolbarElement {
-  icon: string;
+  name: string;
 }
 
 export interface NavigationElement {
   icon: string;
 }
+
+enum EntryStatus {}

@@ -7,7 +7,5 @@ interface ToolbarItemProps {
 }
 
 export const ToolbarItem: FC<ToolbarItemProps> = ({ item }) => (
-  <li className={classes.toolbarItem}>
-    <img src={item.icon} alt="иконка" />
-  </li>
+  <li className={classes.toolbarItem}>{item.name}</li>
 );

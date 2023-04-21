@@ -2,7 +2,7 @@
 
 .header {
   background-color: $color-secondary;
-  padding: 10px 0px;
+  padding: 12px 81px;
 
   .wrapper {
     display: flex;
@@ -11,8 +11,13 @@
 
     .left {
       display: flex;
-      gap: 15px;
       align-items: center;
+      gap: 80px;
+    }
+
+    .icon {
+      cursor: pointer;
+      max-width: 50px;
     }
   }
 }

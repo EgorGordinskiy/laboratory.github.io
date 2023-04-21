@@ -1,21 +1,26 @@
 import { ToolbarElement } from "../types/types";
-import add from "../assets/images/add.svg";
-import copy from "../assets/images/copy.svg";
-import measure from "../assets/images/measure.svg";
-import remove from "../assets/images/delete.svg";
 
 const toolbarList: ToolbarElement[] = [
   {
-    icon: add,
+    name: "Добавить",
   },
   {
-    icon: copy,
+    name: "Редактировать",
   },
   {
-    icon: measure,
+    name: "Утвердить",
   },
   {
-    icon: remove,
+    name: "Забраковать",
+  },
+  {
+    name: "Печать журнала",
+  },
+  {
+    name: "Фильтрация записей",
+  },
+  {
+    name: "Закрыть смену",
   },
 ];
 

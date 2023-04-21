@@ -2,18 +2,11 @@
 
 .toolbarItem {
   cursor: pointer;
-  img {
-    max-width: 45px;
-    padding: $border-radius-primary;
-    background-color: $color-primary;
-    border-radius: 7px;
-    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.429));
-    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.429));
-    transition: all 0.3s;
 
-    &:hover {
-      -webkit-filter: drop-shadow(10px 6px 5px rgba(0, 0, 0, 0.429));
-      filter: drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.429));
-    }
-  }
+  border-radius: $border-radius-primary;
+  padding: $padding-primary;
+
+  background-color: $color-btn;
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
