@@ -1,53 +1,25 @@
 import { FC } from "react";
-import { Container } from "./components/Container";
+import { BurgerMenu } from "./components/BurgerMenu";
 import { Header } from "./components/Header";
-import { MyTable } from "./components/MyTable";
-import { Toolbar } from "./components/Toolbar";
-import toolbarList from "./data/toolbarList";
+import navigationList from "./data/navigationList";
 import { Home } from "./pages/Home";
+import { useState } from "react";
 
 const App: FC = () => {
-  const headers = [
-    "Статус",
-    "№ пробы",
-    "№ транспорта",
-    "№ ямы",
-    "Сорт зерна",
-    "Влажность",
-    "Дата",
-    "Выполнил",
-    "№ Смены",
-  ];
-  const data = [
-    ["John Doe", 25, "New York"],
-    ["Jane Smith", 30, "Los Angeles"],
-    ["Bob Johnson", 45, "Chicago"],
-    ["Sally Brown", 20, "Miami"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-    ["Tom Wilson", 35, "San Francisco"],
-  ];
+  const [burgerMenuActive, setBurgerMenuActive] = useState(false);
+  const handlerBurgerButton = () => setBurgerMenuActive(!burgerMenuActive);
 
   return (
     <>
-      <Header />
+      <Header handlerBurgerButton={handlerBurgerButton} />
       <main>
         <Home />
       </main>
+      <BurgerMenu
+        active={burgerMenuActive}
+        setActive={setBurgerMenuActive}
+        items={navigationList}
+      />
     </>
   );
 };

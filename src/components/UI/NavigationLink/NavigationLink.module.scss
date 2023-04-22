@@ -1,0 +1,12 @@
+@import "../../../root.scss";
+
+.navigationLink {
+  padding: 25px 0px;
+  padding-left: 36px;
+  border-bottom: 1px #f2eadf solid;
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  font-size: 15px;
+  line-height: 18px;
+}

@@ -5,14 +5,16 @@ import classes from "./Header.module.scss";
 import { PersonalAccountButton } from "../UI/PersonalAccountButton";
 import { BurgerButton } from "../UI/BurgerButton";
 
-interface HeaderProps {}
+interface HeaderProps {
+  handlerBurgerButton: any;
+}
 
-export const Header: FC<HeaderProps> = () => (
+export const Header: FC<HeaderProps> = ({ handlerBurgerButton }) => (
   <div className={classes.header}>
     <Container>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <BurgerButton />
+          <BurgerButton onClick={() => handlerBurgerButton()} />
           <Logo />
         </div>
         <div className={classes.right}>

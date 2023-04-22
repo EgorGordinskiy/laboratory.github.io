@@ -25,6 +25,12 @@
 
   td:first-child {
     border-left: none;
+    border-right: none;
+    padding-right: 0px;
+  }
+  td:nth-child(2) {
+    border-left: none;
+    text-align: left;
   }
 
   td:last-child {

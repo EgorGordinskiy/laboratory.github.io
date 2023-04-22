@@ -3,6 +3,8 @@ export interface ToolbarElement {
 }
 
 export interface NavigationElement {
+  name: string;
+  path: string;
   icon: string;
 }
 
