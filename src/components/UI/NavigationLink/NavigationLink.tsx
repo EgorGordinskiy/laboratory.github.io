@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 import { NavigationElement } from "../../../types/types";
 import classes from "./NavigationLink.module.scss";
 
@@ -7,7 +8,7 @@ interface NavigationLinkProps {
 }
 
 export const NavigationLink: FC<NavigationLinkProps> = ({ item }) => (
-  <a className={classes.navigationLink} href={item.path}>
+  <Link className={classes.navigationLink} to={item.path}>
     <img src={item.icon} alt="icon" /> <span>{item.name}</span>
-  </a>
+  </Link>
 );
