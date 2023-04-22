@@ -5,8 +5,20 @@
   padding-left: 36px;
   border-bottom: 1px #f2eadf solid;
   display: flex;
-  gap: 35px;
   align-items: center;
   font-size: 15px;
   line-height: 18px;
+  transition: all 0.3s;
+
+  img {
+    width: 30px;
+  }
+
+  span {
+    margin-left: 35px;
+  }
+
+  &:hover {
+    background-color: #f2eadf;
+  }
 }

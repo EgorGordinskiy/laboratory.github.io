@@ -7,8 +7,7 @@ interface NavigationLinkProps {
 }
 
 export const NavigationLink: FC<NavigationLinkProps> = ({ item }) => (
-  <div className={classes.navigationLink}>
-    <img src={item.icon} alt="icon" />
-    <a href={item.path}>{item.name}</a>
-  </div>
+  <a className={classes.navigationLink} href={item.path}>
+    <img src={item.icon} alt="icon" /> <span>{item.name}</span>
+  </a>
 );
