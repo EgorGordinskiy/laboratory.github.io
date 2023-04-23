@@ -1,6 +1,6 @@
 @import "../../../root.scss";
 
-.templateName {
+.sendButton {
   padding: $toolbar-item-padding;
   background-color: $toolbar-item-background-color;
   border-radius: $toolbar-item-border-radius;
@@ -9,7 +9,7 @@
 
   &:hover {
     &:hover {
-      background-color: #61e2a1;
+      background-color: #ffd747;
       color: #fff;
     }
   }

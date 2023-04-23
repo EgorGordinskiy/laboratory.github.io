@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { ToolbarElement } from "../../types/types";
-import { ToolbarItem } from "../ToolbarItem";
-import { Dropdown } from "../UI/Dropdown/Dropdown";
+import { SendButton } from "../UI/SendButton";
 import classes from "./Toolbar.module.scss";
 
 interface ToolbarProps {
@@ -9,9 +8,12 @@ interface ToolbarProps {
 }
 
 export const Toolbar: FC<ToolbarProps> = ({ toolbarList }) => (
-  <ul className={classes.toolbar}>
-    {toolbarList.map((item) => (
-      <li key={item.key}>{item.element}</li>
-    ))}
-  </ul>
+  <div className={classes.toolbar}>
+    <ul className={classes.list}>
+      {toolbarList.map((item) => (
+        <li key={item.key}>{item.element}</li>
+      ))}
+    </ul>
+    <SendButton />
+  </div>
 );

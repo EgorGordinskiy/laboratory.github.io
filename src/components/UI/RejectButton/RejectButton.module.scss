@@ -1,6 +1,6 @@
 @import "../../../root.scss";
 
-.templateName {
+.rejectButton {
   padding: $toolbar-item-padding;
   background-color: $toolbar-item-background-color;
   border-radius: $toolbar-item-border-radius;
@@ -9,7 +9,7 @@
 
   &:hover {
     &:hover {
-      background-color: #61e2a1;
+      background-color: #f3474a;
       color: #fff;
     }
   }

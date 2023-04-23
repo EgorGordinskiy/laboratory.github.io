@@ -1,16 +1,13 @@
 @import "../../../root.scss";
 
-.templateName {
-  padding: $toolbar-item-padding;
+.updateButton {
+  padding: 4px;
   background-color: $toolbar-item-background-color;
   border-radius: $toolbar-item-border-radius;
   box-shadow: $toolbar-item-box-shadow;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    &:hover {
-      background-color: #61e2a1;
-      color: #fff;
-    }
+    background-color: $color-secondary;
   }
 }
