@@ -9,5 +9,6 @@
 
   &:hover {
     background-color: $color-secondary;
+    box-shadow: $toolbar-item-box-shadow-hover;
   }
 }

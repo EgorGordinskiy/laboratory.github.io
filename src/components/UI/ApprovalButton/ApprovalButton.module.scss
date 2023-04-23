@@ -10,5 +10,6 @@
   &:hover {
     background-color: #61e2a1;
     color: #fff;
+    box-shadow: $toolbar-item-box-shadow-hover;
   }
 }
