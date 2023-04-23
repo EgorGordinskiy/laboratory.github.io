@@ -6,7 +6,7 @@ import { PersonalAccountButton } from "../UI/PersonalAccountButton";
 import { BurgerButton } from "../UI/BurgerButton";
 
 interface HeaderProps {
-  handlerBurgerButton: any;
+  handlerBurgerButton: () => void;
 }
 
 export const Header: FC<HeaderProps> = ({ handlerBurgerButton }) => (

@@ -6,7 +6,7 @@ import classes from "./BurgerMenu.module.scss";
 interface BurgerMenuProps {
   items: NavigationElement[];
   active: boolean;
-  setActive: any;
+  setActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const BurgerMenu: FC<BurgerMenuProps> = ({
