@@ -52,7 +52,7 @@ export const Dropdown: FC<DropdownProps> = () => {
           <li key={item.name}>
             <label>
               <input type="radio" name="item" value={item.name} />
-              {item.name}
+              <span>{item.name}</span>
             </label>
           </li>
         ))}

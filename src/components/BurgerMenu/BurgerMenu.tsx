@@ -26,7 +26,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({
     <div className={classes.content} onClick={(e) => e.stopPropagation()}>
       <ul>
         {items.map((item) => (
-          <li>
+          <li key={item.name}>
             <NavigationLink key={item.name} item={item} />
           </li>
         ))}

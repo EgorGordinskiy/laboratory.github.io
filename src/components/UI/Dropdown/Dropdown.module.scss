@@ -54,7 +54,9 @@
 
   & li {
     & label {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 10px;
       padding: 10px;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
