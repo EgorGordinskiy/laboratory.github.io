@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import navigationList from "./data/navigationList";
 import { Home } from "./pages/Home";
 import { useState } from "react";
+import { RouterApp } from "./components/RouterApp";
 
 const App: FC = () => {
   const [burgerMenuActive, setBurgerMenuActive] = useState(false);
@@ -13,7 +14,7 @@ const App: FC = () => {
     <>
       <Header handlerBurgerButton={handlerBurgerButton} />
       <main>
-        <Home />
+        <RouterApp />
       </main>
       <BurgerMenu
         active={burgerMenuActive}

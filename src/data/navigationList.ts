@@ -40,7 +40,7 @@ const navigationList: NavigationElement[] = [
   },
   {
     name: "Справка",
-    path: "/",
+    path: "/help",
     icon: reference,
   },
 ];

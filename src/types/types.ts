@@ -1,5 +1,3 @@
-import { ReactComponentElement } from "react";
-
 export interface ToolbarElement {
   element: JSX.Element;
   key: number;
@@ -15,4 +13,13 @@ export interface NavigationElement {
   icon: string;
 }
 
-enum EntryStatus {}
+export enum EntryStatus {
+  accepted = "Принята",
+  checked = "Проверяется",
+  rejected = "Забракована",
+}
+
+export enum MessageStatus {
+  sent = "Отправлено",
+  unsent = "Не отправлено",
+}

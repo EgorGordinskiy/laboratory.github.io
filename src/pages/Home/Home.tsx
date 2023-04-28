@@ -14,7 +14,7 @@ export const Home: FC<HomeProps> = () => (
     <Container>
       <div className={classes.wrapper}>
         <Toolbar toolbarList={toolbarList} />
-        <MyTable headers={headersTable} data={dataTable} />
+        <MyTable headers={headersTable} data={dataTable} isScroll={true} />
       </div>
     </Container>
   </section>
