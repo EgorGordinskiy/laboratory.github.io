@@ -1,8 +1,10 @@
-import { FC } from "react";
+import { FC, ButtonHTMLAttributes } from "react";
 import classes from "./RejectButton.module.scss";
 
-interface RejectButtonProps {}
+interface RejectButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
-export const RejectButton: FC<RejectButtonProps> = () => (
-  <button className={classes.rejectButton}>Забраковать</button>
+export const RejectButton: FC<RejectButtonProps> = ({ ...rest }) => (
+  <button className={classes.rejectButton} {...rest}>
+    Забраковать
+  </button>
 );

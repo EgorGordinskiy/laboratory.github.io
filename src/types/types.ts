@@ -23,3 +23,8 @@ export enum MessageStatus {
   sent = "Отправлено",
   unsent = "Не отправлено",
 }
+
+export enum ModalFormButtonBackgrounds {
+  primary = "primary",
+  secondary = "secondary",
+}

@@ -1,0 +1,12 @@
+@import "../../root.scss";
+
+.modalForm {
+  font-size: 14px;
+
+  .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 25px;
+  }
+}
