@@ -1,8 +1,10 @@
 import { FC } from "react";
 import classes from "./Logo.module.scss";
 
-interface LogoProps {}
+interface LogoProps {
+  name: string;
+}
 
-export const Logo: FC<LogoProps> = () => (
-  <div className={classes.logo}>Журнал регистрации проб</div>
+export const Logo: FC<LogoProps> = ({ name }) => (
+  <div className={classes.logo}>{name}</div>
 );

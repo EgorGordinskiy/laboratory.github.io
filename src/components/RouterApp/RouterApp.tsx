@@ -6,10 +6,12 @@ import { LoginPage } from "../../pages/LoginPage";
 
 interface RouterAppProps {}
 
-export const RouterApp: FC<RouterAppProps> = () => (
-  <Routes>
-    <Route index path="/" element={<Home />} />
-    <Route index path="/login" element={<LoginPage />} />
-    <Route index path="/help" element={<HelpPage />} />
-  </Routes>
-);
+export const RouterApp: FC<RouterAppProps> = () => {
+  return (
+    <Routes>
+      <Route index path="/" element={<Home />} />
+      <Route index path="/login" element={<LoginPage />} />
+      <Route index path="/help" element={<HelpPage />} />
+    </Routes>
+  );
+};
