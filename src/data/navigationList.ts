@@ -14,11 +14,6 @@ const navigationList: NavigationElement[] = [
     icon: flask,
   },
   {
-    name: "Планирование",
-    path: "/",
-    icon: calendar,
-  },
-  {
     name: "Документация",
     path: "/",
     icon: table,
