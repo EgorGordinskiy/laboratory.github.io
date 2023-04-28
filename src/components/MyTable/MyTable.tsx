@@ -1,30 +1,50 @@
 import { FC, useState } from "react";
 import classes from "./MyTable.module.scss";
 import accepted from "../../assets/images/accepted.svg";
-import message from "../../assets/images/message.svg";
+import sent from "../../assets/images/sent.svg";
+import unsent from "../../assets/images/unsent.svg";
+import checked from "../../assets/images/checked.svg";
+// import rejected from "../../assets/images/rejected.svg";
+import { EntryStatus, MessageStatus } from "../../types/types";
 
 interface MyTableProps {
   headers: string[];
   data: any[][];
+  isScroll: boolean;
 }
 
-export const MyTable: FC<MyTableProps> = ({ headers, data }) => {
-  const acceptedIcon = <img src={accepted} alt="Принят" />;
-  const sentIcon = <img src={message} alt="Принят" />;
+export const MyTable: FC<MyTableProps> = ({ headers, data, isScroll }) => {
+  const acceptedIcon = <img src={accepted} alt="Запись одобрена" />;
+  const sentIcon = <img src={sent} alt="Сообщение отправлено" />;
+  const unsentIcon = <img src={unsent} alt="Сообщение не отправлено" />;
+  const checkedIcon = <img src={checked} alt="Сообщение не отправлено" />;
+  // const rejectedIcon = <img src={rejected} alt="Сообщение не отправлено" />;
 
   function getCellValue(cellData: any) {
     switch (cellData) {
-      case "Принят":
+      case EntryStatus.accepted:
         return acceptedIcon;
-      case "Отправлен":
+      case EntryStatus.checked:
+        return checkedIcon;
+      case EntryStatus.rejected:
+        return EntryStatus.rejected;
+      case MessageStatus.sent:
         return sentIcon;
+      case MessageStatus.unsent:
+        return unsentIcon;
       default:
         return cellData;
     }
   }
 
   return (
-    <div className={classes.tableContainer}>
+    <div
+      className={
+        isScroll
+          ? [classes.tableContainer, classes.scroll].join(" ")
+          : classes.tableContainer
+      }
+    >
       <table className={classes.table}>
         <thead className={classes.header}>
           <tr>
