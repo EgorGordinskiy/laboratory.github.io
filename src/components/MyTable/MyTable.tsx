@@ -4,7 +4,7 @@ import accepted from "../../assets/images/accepted.svg";
 import sent from "../../assets/images/sent.svg";
 import unsent from "../../assets/images/unsent.svg";
 import checked from "../../assets/images/checked.svg";
-// import rejected from "../../assets/images/rejected.svg";
+import rejected from "../../assets/images/rejected.svg";
 import { EntryStatus, MessageStatus } from "../../types/types";
 
 interface MyTableProps {
@@ -18,7 +18,7 @@ export const MyTable: FC<MyTableProps> = ({ headers, data, isScroll }) => {
   const sentIcon = <img src={sent} alt="Сообщение отправлено" />;
   const unsentIcon = <img src={unsent} alt="Сообщение не отправлено" />;
   const checkedIcon = <img src={checked} alt="Сообщение не отправлено" />;
-  // const rejectedIcon = <img src={rejected} alt="Сообщение не отправлено" />;
+  const rejectedIcon = <img src={rejected} alt="Сообщение не отправлено" />;
 
   function getCellValue(cellData: any) {
     switch (cellData) {
@@ -27,7 +27,7 @@ export const MyTable: FC<MyTableProps> = ({ headers, data, isScroll }) => {
       case EntryStatus.checked:
         return checkedIcon;
       case EntryStatus.rejected:
-        return EntryStatus.rejected;
+        return rejectedIcon;
       case MessageStatus.sent:
         return sentIcon;
       case MessageStatus.unsent:

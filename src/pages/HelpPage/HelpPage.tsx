@@ -22,11 +22,11 @@ export const HelpPage: FC<HelpPageProps> = () => (
           data={dataSymbolsHelpTable}
           isScroll={false}
         />
-        <MyTable
+        {/* <MyTable
           headers={headersButtonsHelpTable}
           data={dataButtonsHelpTable}
           isScroll={false}
-        />
+        /> */}
       </div>
     </Container>
   </section>
