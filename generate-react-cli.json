@@ -10,7 +10,7 @@
         "style": "templates/default/TemplateName.module.scss",
         "index": "templates/default/index.ts"
       },
-      "path": "src/components/UI",
+      "path": "src/components",
       "withStyle": true,
       "withTest": false,
       "withStory": false,
