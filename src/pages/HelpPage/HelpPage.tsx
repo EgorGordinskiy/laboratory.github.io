@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Container } from "../../components/Container";
+import { HelpTable } from "../../components/HelpTable";
 import { MyTable } from "../../components/MyTable";
 import dataButtonsHelpTable from "../../data/dataButtonsHelpTable";
 import dataSymbolsHelpTable from "../../data/dataSymbolsHelpTable";
@@ -18,17 +19,13 @@ export const HelpPage: FC<HelpPageProps> = () => {
             В этом разделе описан функционал программы, а именно условные
             обозначения в таблице журнала регистрации проб и кнопки.
           </p>
-          <MyTable
+          <HelpTable
             headers={headersSymbolsHelpTable}
             data={dataSymbolsHelpTable}
-            isScroll={false}
-            isHeaderSticky={false}
           />
-          <MyTable
+          <HelpTable
             headers={headersButtonsHelpTable}
             data={dataButtonsHelpTable}
-            isScroll={false}
-            isHeaderSticky={false}
           />
         </div>
       </Container>

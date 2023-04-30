@@ -12,6 +12,7 @@ interface SampleLogPageProps {}
 
 export const SampleLogPage: FC<SampleLogPageProps> = () => {
   const [modal, setModal] = useState(false);
+  const [filterValue, setFilterValue] = useState("Все");
   const handlerClickShiftClosing = () => setModal(true);
   const handlerClickAccept = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -22,14 +23,51 @@ export const SampleLogPage: FC<SampleLogPageProps> = () => {
     setModal(false);
   };
 
+  const hadlerFilterValue = (value: string) => setFilterValue(value);
+
+  function filterTable(list: any[][], value: string): any[][] {
+    let listResult: any[][] = [[]];
+    switch (value) {
+      case "Все":
+        listResult = list;
+        break;
+      case "Отправленные":
+        listResult = list.filter((item) => item.includes("Отправлено"));
+        break;
+      case "Незаполненные":
+        listResult = list.filter(
+          (item) => item.includes("") && !item.includes("Забракована")
+        );
+        break;
+      case "Ожидают проверки":
+        listResult = list.filter((item) => item.includes("Проверяется"));
+        break;
+      case "Утвержденные":
+        listResult = list.filter((item) => item.includes("Принята"));
+        break;
+      case "Забракованные":
+        listResult = list.filter((item) => item.includes("Забракована"));
+        break;
+      default:
+        listResult = list;
+        break;
+    }
+    return listResult;
+  }
+
+  console.log(filterTable(dataTable, filterValue));
+
   return (
     <section className={classes.home}>
       <Container>
         <div className={classes.wrapper}>
-          <Toolbar handlerClickShiftClosing={handlerClickShiftClosing} />
+          <Toolbar
+            handlerClickShiftClosing={handlerClickShiftClosing}
+            hadlerFilterValue={hadlerFilterValue}
+          />
           <MyTable
             headers={headersTable}
-            data={dataTable}
+            data={filterTable(dataTable, filterValue)}
             isScroll={true}
             isHeaderSticky={true}
           />

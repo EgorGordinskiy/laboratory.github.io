@@ -3,14 +3,15 @@ import classes from "./Dropdown.module.scss";
 import vector from "../../../assets/images/vector.svg";
 import filterList from "../../../data/filterList";
 
-interface DropdownProps {}
+interface DropdownProps {
+  hadlerFilterValue: (value: string) => void;
+}
 
-export const Dropdown: FC<DropdownProps> = () => {
+export const Dropdown: FC<DropdownProps> = ({ hadlerFilterValue }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("");
 
   const handleItemClick = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedItem(event.target.value);
+    hadlerFilterValue(event.target.value);
   };
 
   const handleMouseEnter = () => {
@@ -51,7 +52,12 @@ export const Dropdown: FC<DropdownProps> = () => {
         {filterList.map((item) => (
           <li key={item.name}>
             <label>
-              <input type="radio" name="item" value={item.name} />
+              <input
+                type="radio"
+                name="item"
+                value={item.name}
+                onChange={handleItemClick}
+              />
               <span>{item.name}</span>
             </label>
           </li>
