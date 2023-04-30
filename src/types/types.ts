@@ -11,6 +11,7 @@ export interface NavigationElement {
   name: string;
   path: string;
   icon: string;
+  description: string;
 }
 
 export enum EntryStatus {

@@ -11,9 +11,15 @@ interface MyTableProps {
   headers: string[];
   data: any[][];
   isScroll: boolean;
+  isHeaderSticky: boolean;
 }
 
-export const MyTable: FC<MyTableProps> = ({ headers, data, isScroll }) => {
+export const MyTable: FC<MyTableProps> = ({
+  headers,
+  data,
+  isScroll,
+  isHeaderSticky,
+}) => {
   const acceptedIcon = <img src={accepted} alt="Запись одобрена" />;
   const sentIcon = <img src={sent} alt="Сообщение отправлено" />;
   const unsentIcon = <img src={unsent} alt="Сообщение не отправлено" />;
@@ -46,7 +52,13 @@ export const MyTable: FC<MyTableProps> = ({ headers, data, isScroll }) => {
       }
     >
       <table className={classes.table}>
-        <thead className={classes.header}>
+        <thead
+          className={
+            isHeaderSticky
+              ? [classes.header, classes.sticky].join(" ")
+              : classes.header
+          }
+        >
           <tr>
             {headers.map((header, index) => (
               <th key={index}>{header}</th>

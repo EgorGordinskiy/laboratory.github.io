@@ -27,7 +27,12 @@ export const SampleLogPage: FC<SampleLogPageProps> = () => {
       <Container>
         <div className={classes.wrapper}>
           <Toolbar handlerClickShiftClosing={handlerClickShiftClosing} />
-          <MyTable headers={headersTable} data={dataTable} isScroll={true} />
+          <MyTable
+            headers={headersTable}
+            data={dataTable}
+            isScroll={true}
+            isHeaderSticky={true}
+          />
         </div>
       </Container>
       <Modal visible={modal} setVisible={setModal}>

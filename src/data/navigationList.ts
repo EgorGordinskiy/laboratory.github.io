@@ -12,31 +12,37 @@ const navigationList: NavigationElement[] = [
     name: "Журнал регистрации проб",
     path: "/",
     icon: flask,
+    description: "",
   },
   {
     name: "Документация",
     path: "/documentation",
     icon: table,
+    description: "",
   },
   {
     name: "Справочник",
     path: "/",
     icon: references,
+    description: "",
   },
   {
     name: "Статистика",
     path: "/",
     icon: statistics,
+    description: "",
   },
   {
     name: "Настройки",
     path: "/",
     icon: settings,
+    description: "",
   },
   {
     name: "Справка",
     path: "/help",
     icon: reference,
+    description: "",
   },
 ];
 

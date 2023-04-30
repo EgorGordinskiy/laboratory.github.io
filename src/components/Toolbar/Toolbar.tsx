@@ -2,24 +2,23 @@ import { FC } from "react";
 import { ToolbarElement } from "../../types/types";
 import { SendButton } from "../UI/SendButton";
 import classes from "./Toolbar.module.scss";
-import { useState } from "react";
-import { AddButton } from "../UI/AddButton";
 import { ApprovalButton } from "../UI/ApprovalButton";
 import { Dropdown } from "../UI/Dropdown";
 import { MagazinePrintButton } from "../UI/MagazinePrintButton";
 import { RejectButton } from "../UI/RejectButton";
 import { ShiftClosingButton } from "../UI/ShiftClosingButton";
 import { UpdateButton } from "../UI/UpdateButton";
+import { MyButton } from "../UI/MyButton";
 
 interface ToolbarProps {
-  // toolbarList: ToolbarElement[];
   handlerClickShiftClosing: () => void;
 }
 
 export const Toolbar: FC<ToolbarProps> = ({ handlerClickShiftClosing }) => {
   const toolbarList: ToolbarElement[] = [
     { element: <UpdateButton />, key: 3 },
-    { element: <AddButton />, key: 2 },
+    { element: <MyButton>Добавить</MyButton>, key: 2 },
+    { element: <MyButton>Редактировать</MyButton>, key: 8 },
     { element: <ApprovalButton />, key: 4 },
     { element: <RejectButton />, key: 5 },
     { element: <MagazinePrintButton />, key: 6 },

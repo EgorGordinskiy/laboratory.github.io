@@ -9,25 +9,29 @@ import classes from "./HelpPage.module.scss";
 
 interface HelpPageProps {}
 
-export const HelpPage: FC<HelpPageProps> = () => (
-  <section className={classes.helpPage}>
-    <Container>
-      <div className={classes.wrapper}>
-        <p>
-          В этом разделе описан функционал программы, а именно условные
-          обозначения в таблице журнала регистрации проб и кнопки.
-        </p>
-        <MyTable
-          headers={headersSymbolsHelpTable}
-          data={dataSymbolsHelpTable}
-          isScroll={false}
-        />
-        {/* <MyTable
-          headers={headersButtonsHelpTable}
-          data={dataButtonsHelpTable}
-          isScroll={false}
-        /> */}
-      </div>
-    </Container>
-  </section>
-);
+export const HelpPage: FC<HelpPageProps> = () => {
+  return (
+    <section className={classes.helpPage}>
+      <Container>
+        <div className={classes.wrapper}>
+          <p>
+            В этом разделе описан функционал программы, а именно условные
+            обозначения в таблице журнала регистрации проб и кнопки.
+          </p>
+          <MyTable
+            headers={headersSymbolsHelpTable}
+            data={dataSymbolsHelpTable}
+            isScroll={false}
+            isHeaderSticky={false}
+          />
+          <MyTable
+            headers={headersButtonsHelpTable}
+            data={dataButtonsHelpTable}
+            isScroll={false}
+            isHeaderSticky={false}
+          />
+        </div>
+      </Container>
+    </section>
+  );
+};

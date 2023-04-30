@@ -50,8 +50,11 @@
 
   .header {
     background-color: #e7e7e7;
-    position: sticky;
-    top: 0;
+
+    &.sticky {
+      position: sticky;
+      top: 0;
+    }
 
     & th:first-child {
       border-radius: 7px 0px 0px 7px;
