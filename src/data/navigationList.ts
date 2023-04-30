@@ -15,7 +15,7 @@ const navigationList: NavigationElement[] = [
   },
   {
     name: "Документация",
-    path: "/",
+    path: "/documentation",
     icon: table,
   },
   {
