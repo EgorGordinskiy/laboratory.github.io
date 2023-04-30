@@ -6,12 +6,11 @@ import { MyTable } from "../../components/MyTable";
 import { Toolbar } from "../../components/Toolbar";
 import dataTable from "../../data/dataTable";
 import headersTable from "../../data/headersTable";
-import toolbarList from "../../data/toolbarList";
-import classes from "./Home.module.scss";
+import classes from "./SampleLogPage.module.scss";
 
-interface HomeProps {}
+interface SampleLogPageProps {}
 
-export const Home: FC<HomeProps> = () => {
+export const SampleLogPage: FC<SampleLogPageProps> = () => {
   const [modal, setModal] = useState(false);
   const handlerClickShiftClosing = () => setModal(true);
   const handlerClickAccept = (e: React.MouseEvent<HTMLButtonElement>) => {

@@ -2,7 +2,6 @@ import { FC } from "react";
 import { BurgerMenu } from "./components/BurgerMenu";
 import { Header } from "./components/Header";
 import navigationList from "./data/navigationList";
-import { Home } from "./pages/Home";
 import { useState } from "react";
 import { RouterApp } from "./components/RouterApp";
 
