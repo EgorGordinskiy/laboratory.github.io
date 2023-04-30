@@ -12,15 +12,15 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: $color-text;
-  &::-webkit-scrollbar {
-    width: 15px;
-    background-color: #d9d9d9;
-    border-radius: 12px;
-  }
-  &::-webkit-scrollbar-thumb {
-    border-radius: 12px;
-    background-color: #fff;
-  }
+  // &::-webkit-scrollbar {
+  //   width: 15px;
+  //   background-color: #d9d9d9;
+  //   border-radius: 12px;
+  // }
+  // &::-webkit-scrollbar-thumb {
+  //   border-radius: 12px;
+  //   background-color: #fff;
+  // }
 }
 
 section {

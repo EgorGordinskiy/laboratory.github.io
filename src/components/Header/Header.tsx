@@ -26,8 +26,17 @@ export const Header: FC<HeaderProps> = ({ handlerBurgerButton }) => {
       case "/documentation":
         setPageTitle("Документация");
         break;
+      case "/guide":
+        setPageTitle("Справочник");
+        break;
+      case "/statistics":
+        setPageTitle("Статистика");
+        break;
+      case "/settings":
+        setPageTitle("Настройки");
+        break;
       default:
-        setPageTitle("Page Not Found");
+        setPageTitle("Упс! А такой странички нет :(");
         break;
     }
   }, [location.pathname]);

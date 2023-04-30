@@ -22,19 +22,19 @@ const navigationList: NavigationElement[] = [
   },
   {
     name: "Справочник",
-    path: "/",
+    path: "/guide",
     icon: references,
     description: "",
   },
   {
     name: "Статистика",
-    path: "/",
+    path: "/statistics",
     icon: statistics,
     description: "",
   },
   {
     name: "Настройки",
-    path: "/",
+    path: "/settings",
     icon: settings,
     description: "",
   },
