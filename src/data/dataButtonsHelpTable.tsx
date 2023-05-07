@@ -7,8 +7,6 @@ import { RejectButton } from "../components/UI/RejectButton";
 import { MagazinePrintButton } from "../components/UI/MagazinePrintButton";
 import { ShiftClosingButton } from "../components/UI/ShiftClosingButton";
 import { SendButton } from "../components/UI/SendButton";
-import navigationList from "./navigationList";
-import { NavigationLink } from "../components/UI/NavigationLink";
 
 const dataButtonsHelpTable = [
   [

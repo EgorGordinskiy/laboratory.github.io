@@ -48,3 +48,16 @@ button {
   font-family: inherit;
   font-weight: inherit;
 }
+input {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+}
+
+.react-pdf__Page__annotations {
+  display: none;
+}

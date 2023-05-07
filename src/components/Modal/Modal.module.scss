@@ -17,11 +17,7 @@
   cursor: pointer;
 
   .content {
-    padding: 28px 25px;
-    background-color: #fafafa;
-    // box-shadow: $color-four 0px 0px 10px;
-    border-radius: 7px;
-    max-width: 500px;
+    width: auto;
     color: #000;
     display: flex;
     flex-direction: column;
@@ -44,28 +40,3 @@
   opacity: 1;
   pointer-events: all;
 }
-
-// h3 {
-//   font-size: 25px;
-//   color: $color-two;
-// }
-
-// p {
-//   font-size: 20px;
-// }
-
-// label {
-//   display: flex;
-//   gap: 5px;
-//   align-items: center;
-//   padding: 2px 0px;
-//   p {
-//     width: 30%;
-//   }
-// }
-
-// form {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 10px;
-// }

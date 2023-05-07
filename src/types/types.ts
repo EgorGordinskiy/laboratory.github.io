@@ -29,3 +29,8 @@ export enum ModalFormButtonBackgrounds {
   primary = "primary",
   secondary = "secondary",
 }
+
+export interface DocumentElement {
+  name: string;
+  file: string;
+}

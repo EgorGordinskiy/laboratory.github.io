@@ -4,5 +4,5 @@ import classes from "./TemplateName.module.scss";
 interface TemplateNameProps {}
 
 export const TemplateName: FC<TemplateNameProps> = () => (
-  <button className={classes.templateName}></button>
+  <div className={classes.templateName}></div>
 );
