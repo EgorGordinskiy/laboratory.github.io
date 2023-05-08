@@ -1,10 +1,11 @@
 import { DocumentElement } from "../types/types";
 import file from "../assets/documents/doc.pdf";
+import mat from "../assets/documents/mat.pdf";
 
 const documentsList: DocumentElement[] = [
   {
     name: "Форма. Акт отбора проб. Пример",
-    file: file,
+    file: mat,
   },
   {
     name: "Форма журнала. Регистрация проб",

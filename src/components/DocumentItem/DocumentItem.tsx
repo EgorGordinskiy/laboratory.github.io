@@ -15,6 +15,7 @@ interface DocumentItemProps {
 export const DocumentItem: FC<DocumentItemProps> = ({ item }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [numPages, setNumPages] = useState<number>(0);
+  const [pageNumber, setPageNumber] = useState(1);
 
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
@@ -25,6 +26,14 @@ export const DocumentItem: FC<DocumentItemProps> = ({ item }) => {
   ) => {
     event.stopPropagation();
   };
+
+  function goToPrevPage() {
+    setPageNumber(pageNumber - 1);
+  }
+
+  function goToNextPage() {
+    setPageNumber(pageNumber + 1);
+  }
 
   return (
     <>
@@ -45,7 +54,7 @@ export const DocumentItem: FC<DocumentItemProps> = ({ item }) => {
           </div>
           <div className={classes.documentName}>{item.name}</div>
         </div>
-        <a href={item.file} onClick={handleLinkClick}>
+        <a href={item.file} onClick={handleLinkClick} target="_blank">
           <img className={classes.icon} src={download} alt="download" />
         </a>
       </li>
@@ -53,16 +62,28 @@ export const DocumentItem: FC<DocumentItemProps> = ({ item }) => {
         <Modal visible={modalVisible} setVisible={setModalVisible}>
           <div className={classes.pdfContainer}>
             <Document
+              className={classes.pdfPage}
               file={item.file}
               onLoadSuccess={onDocumentLoadSuccess}
               loading={"Загрузка..."}
               error={""}
               noData={""}
             >
-              {Array.from(new Array(numPages), (el, index) => (
-                <Page key={index + 1} pageNumber={index + 1} />
-              ))}
+              <Page key={pageNumber} pageNumber={pageNumber} />
             </Document>
+            {numPages > 1 && (
+              <div className={classes.pdfBtns}>
+                <button disabled={pageNumber <= 1} onClick={goToPrevPage}>
+                  {"<"}
+                </button>
+                <button
+                  disabled={pageNumber >= numPages}
+                  onClick={goToNextPage}
+                >
+                  {">"}
+                </button>
+              </div>
+            )}
           </div>
         </Modal>
       )}
